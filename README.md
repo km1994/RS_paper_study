@@ -2,9 +2,13 @@
 
 > 作者：杨夕
 > 
-> 项目地址：https://github.com/km1994/nlp_paper_study
+> 推荐系统 论文学习项目地址：https://github.com/km1994/RS_paper_study
+> 
+> NLP 论文学习项目地址：https://github.com/km1994/nlp_paper_study
 > 
 > 个人介绍：大佬们好，我叫杨夕，该项目主要是本人在研读顶会论文和复现经典论文过程中，所见、所思、所想、所闻，可能存在一些理解错误，希望大佬们多多指正。
+> 
+> NLP 面经地址：https://github.com/km1994/NLP-Interview-Notes
 
 > NLP && 推荐学习群
 
@@ -22,6 +26,13 @@
   - [推荐系统 整体架构？](#推荐系统-整体架构)
   - [推荐系统 核心部分？](#推荐系统-核心部分)
   - [内容介绍](#内容介绍)
+    - [推荐系统 基础](#推荐系统-基础)
+    - [推荐系统方案](#推荐系统方案)
+    - [【关于 推荐系统】 那些你不知道的事](#关于-推荐系统-那些你不知道的事-1)
+    - [CTR](#ctr)
+    - [CTR](#ctr-1)
+    - [Item2Vec](#item2vec)
+    - [【关于 Retrieval】那些你不知道的事](#关于-retrieval那些你不知道的事)
 
 ## 什么是推荐系统？
 
@@ -84,13 +95,16 @@
 
 ## 内容介绍
 
-- [推荐系统 基础](https://github.com/km1994/RS_paper_study/tree/master/base_study)
-  - [【关于 推荐系统】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base1_基础概念篇.md)
-  - [【关于 召回】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base2_召回篇.md)
-  - [【关于 embedding召回】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base3_embedding召回.md)
-  - [【关于 协同过滤】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/)
-  - [【关于 矩阵分解】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base5_矩阵分解.md)
-  - [【关于 FM】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base6_FM.md)
+### [推荐系统 基础](https://github.com/km1994/RS_paper_study/tree/master/base_study)
+- [【关于 推荐系统】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base1_基础概念篇.md)
+- [【关于 召回】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base2_召回篇.md)
+- [【关于 embedding召回】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base3_embedding召回.md)
+- [【关于 协同过滤】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/)
+- [【关于 矩阵分解】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base5_矩阵分解.md)
+- [【关于 FM】那些你不知道的事](https://github.com/km1994/RS_paper_study/tree/master/base_study/base6_FM.md)
+
+### [推荐系统方案](res/)
+
 - [推荐系统方案](res/)
   - [【关于 召回】 那些你不知道的事](res/recall.md)
     - [一、推荐系统 框架图](#一推荐系统-框架图)
@@ -99,6 +113,9 @@
       - [2.2 那么如何在召回阶段利用模型来代替多路召回呢？](#22-那么如何在召回阶段利用模型来代替多路召回呢)
       - [2.3 模型召回的优缺点](#23-模型召回的优缺点)
       - [2.4 模型召回的典型工作](#24-模型召回的典型工作)
+
+### [【关于 推荐系统】 那些你不知道的事](Introduction.md)
+
 - [【关于 推荐系统】 那些你不知道的事](Introduction.md)
   - [一、推荐系统 关系图](#一推荐系统-关系图)
   - [二、大纲](#二大纲)
@@ -160,6 +177,9 @@
       - [7.6.2 步骤](#762-步骤)
       - [7.6.3 关键点](#763-关键点)
   - [参考](#参考)
+
+### [CTR](CTR/)
+
 - [CTR](CTR/)
   - [【关于 GBDT+LR】 那些你不知道的事](CTR/GBDT_LR/)
   - [【关于 DeepCF】那些你不知道的事](CTR/DeepCF_study/)
@@ -182,7 +202,41 @@
       - 思路：通过设计一个局部激活单元，自适应地学习用户兴趣的表示，从历史行为到某个特定的广告，这种表示向量在不同的状态下变化，大大提高了模型的表达能力。
       - 开发了两种技术：小批量感知正则化和数据自适应激活函数，可以帮助训练具有数亿参数的工业深度网络。
       - 实验结果：在两个公共数据集和一个超过20亿样本的阿里巴巴真实生产数据集上的实验表明了所提方法的有效性，其性能优于现有的方法。目前，DIN已成功部署在阿里巴巴的在线展示广告系统中，服务于主要业务。
+
+### [CTR](CTR/)
+
 - [DeepWalk](DeepWalk/)
   - [【关于 DeepWalk】 那些你不知道的事](DeepWalk/)
+
+### [Item2Vec](Item2Vec/)
+
 - [Item2Vec](Item2Vec/)
   - [【关于 Item2Vec 】 那些你不知道的事](Item2Vec/)
+
+### [【关于 Retrieval】那些你不知道的事](Retrieval/)
+
+- [【关于 Embedding-based Retrieval in Facebook Search】那些你不知道的事](Retrieval/EmbeddingbasedRetrievalinFacebookSearch/)
+  - [一、引言](#一引言)
+  - [二、搜索引擎类别介绍](#二搜索引擎类别介绍)
+    - [2.1 term matching（文本匹配）](#21-term-matching文本匹配)
+    - [2.2 semantic matching（语义匹配）](#22-semantic-matching语义匹配)
+  - [三、搜索引擎方法](#三搜索引擎方法)
+    - [3.1 搜索引擎方法介绍](#31-搜索引擎方法介绍)
+    - [3.2 检索](#32-检索)
+    - [3.3 排序](#33-排序)
+  - [四、摘要](#四摘要)
+  - [五、 在 Facebook 搜索中应用 Embedding-based Retrieval 技术遇到的挑战](#五-在-facebook-搜索中应用-embedding-based-retrieval-技术遇到的挑战)
+  - [六、本文搜索引擎建模](#六本文搜索引擎建模)
+    - [6.1 问题定位](#61-问题定位)
+    - [6.2 Unified Embedding Model](#62-unified-embedding-model)
+    - [6.3 损失函数](#63-损失函数)
+    - [6.4 正负样本选取策略](#64-正负样本选取策略)
+  - [七、特征工程](#七特征工程)
+  - [八、在线Serving](#八在线serving)
+    - [8.1 线上近似最近邻搜索](#81-线上近似最近邻搜索)
+    - [8.2 基于 term 的布尔表达式](#82-基于-term-的布尔表达式)
+    - [8.2 优化方案](#82-优化方案)
+  - [九、Full-stack优化](#九full-stack优化)
+    - [9.1 基于 embedding 召回的结果自然是被次优处理的 问题](#91-基于-embedding-召回的结果自然是被次优处理的-问题)
+    - [9.2 基于 embedding 的语义召回模型需要更加深入的分析才能不断提升性能 问题](#92-基于-embedding-的语义召回模型需要更加深入的分析才能不断提升性能-问题)
+
